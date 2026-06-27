@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Fonts ─── */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* ─── Brand Colors ─── */
+  --color-background: #0a0a0a;
+  --color-primary: #e6c487;
+  --color-on-primary: #412d00;
+  --color-primary-container: #c9a96e;
+  --color-on-primary-container: #543d0c;
+  --color-primary-fixed: #ffdea4;
+  --color-primary-fixed-dim: #e4c285;
+  --color-on-primary-fixed: #261900;
+  --color-on-primary-fixed-variant: #5a4312;
+  --color-inverse-primary: #745a27;
+  --color-surface-tint: #e4c285;
+
+  /* ─── Secondary ─── */
+  --color-secondary: #c8c5ca;
+  --color-on-secondary: #303033;
+  --color-secondary-container: #47464a;
+  --color-on-secondary-container: #b6b4b8;
+  --color-secondary-fixed: #e4e1e6;
+  --color-secondary-fixed-dim: #c8c5ca;
+  --color-on-secondary-fixed: #1b1b1e;
+  --color-on-secondary-fixed-variant: #47464a;
+
+  /* ─── Tertiary ─── */
+  --color-tertiary: #cac8cc;
+  --color-on-tertiary: #303033;
+  --color-tertiary-container: #afadb0;
+  --color-on-tertiary-container: #414144;
+  --color-tertiary-fixed: #e4e1e5;
+  --color-tertiary-fixed-dim: #c8c6c9;
+  --color-on-tertiary-fixed: #1b1b1e;
+  --color-on-tertiary-fixed-variant: #47464a;
+
+  /* ─── Error ─── */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* ─── Surface ─── */
+  --color-surface: #12131a;
+  --color-surface-dim: #12131a;
+  --color-surface-bright: #383940;
+  --color-surface-variant: #33343c;
+  --color-surface-container-lowest: #0c0e14;
+  --color-surface-container-low: #1a1b22;
+  --color-surface-container: #1e1f26;
+  --color-surface-container-high: #282a31;
+  --color-surface-container-highest: #33343c;
+  --color-on-surface: #e2e1eb;
+  --color-on-surface-variant: #d0c5b5;
+  --color-on-background: #e2e1eb;
+  --color-inverse-surface: #e2e1eb;
+  --color-inverse-on-surface: #2f3037;
+  --color-outline: #998f81;
+  --color-outline-variant: #4d463a;
+
+  /* ─── Spacing ─── */
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 8px;
+
+  /* ─── Border radius ─── */
+  --radius-sm: 0.125rem;
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /* ─── Max width ─── */
+  --width-container-max: 1280px;
+}
+
+/* ─── Custom Component Classes ─── */
+.glass-card {
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+      135deg,
+      rgba(201, 169, 110, 0.3) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    )
+    1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-image: linear-gradient(
+      135deg,
+      rgba(201, 169, 110, 0.6) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    1;
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.1);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 15px rgba(201, 169, 110, 0.3);
+}
+
+.architectural-bg {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+/* ─── Material Symbols ─── */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  user-select: none;
+}
+
+/* ─── Global ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
